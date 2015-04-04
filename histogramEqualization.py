@@ -1,5 +1,5 @@
 from PIL import Image
-import numpy as np
+#import numpy as np
 
 im1 = Image.open ('lowContrast.jpg').convert("L")
 (l,h) = im1.size
@@ -21,15 +21,15 @@ for i in range (0,y):
     fda.append(0)
     for j in range (0,i+1):
         fda[i] += p[j]
-    fda[i]=int(np.around(fda[i]*(y-1)))
+    fda[i]=int(fda[i]*(y-1))
 
 print
 print
 print(fda)
 
-for j in range (0,h):
-    for i in range (0,l):
-        pos = im1.getpixel((j,i))
-        out.putpixel((j,i), fda[pos])
+for i in range (0,l):
+    for j in range (0,h):
+        pos = im1.getpixel((i,j))
+        out.putpixel((i,j), fda[pos])
 
 out.save("equalizedContrast.jpg","JPEG");
