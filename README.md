@@ -10,10 +10,10 @@ processing and python too, at least for me it's been a really solid and rewardin
 
 Instructions to install Pillow (the library which I use for image processing):
 
-1 - Install these packages:
-	build-dep python-imaging
+1 - Install this package:
+	python-imaging
 	with the command:
-	sudo apt-get install build-dep python-imaging
+	sudo apt-get build-dep python-imaging
 	(Or the equivalent for your linux distribution)
 
 2 - Install these libs:
