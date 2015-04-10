@@ -13,17 +13,17 @@ Instructions to install Pillow (the library which I use for image processing):
 1 - Install this package:
 	python-imaging
 	with the command:
-	sudo apt-get build-dep python-imaging
+	 apt-get build-dep python-imaging
 	(Or the equivalent for your linux distribution)
 
 2 - Install these libs:
 	libjpeg8 libjpeg62-dev libfreetype6 libfreetype6-dev
 	With the command:
-	sudo apt-get install libjpeg8 libjpeg62-dev libfreetype6 libfreetype6-dev
+	 apt-get install libjpeg8 libjpeg62-dev libfreetype6 libfreetype6-dev
 	(Or the equivalent for your linux distribution)
 
 3- install pillow using pip:
-	sudo pip install Pillow
+	 pip install Pillow
 	(if you don't have pip installed, it is probably included in your distro package list, go for it!)
 	(Or the equivalent for your linux distribution)
 
