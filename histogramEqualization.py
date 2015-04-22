@@ -10,7 +10,7 @@ y = len(his)
 p = []
 fda = []
 for i in range (0,y):
-    p.append(his[i]/(float)(l*h))
+    p.append((his[i]*(y-1))/(float)(l*h))
 
 print
 print
@@ -20,7 +20,7 @@ for i in range (0,y):
     fda.append(0)
     for j in range (0,i+1):
         fda[i] += p[j]
-    fda[i]=int(fda[i]*(y-1))
+    #fda[i]=int(fda[i]*(y-1))
 
 print
 print
