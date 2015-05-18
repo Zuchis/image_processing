@@ -37,4 +37,19 @@ def dilation(imageName,b):
                 out.putpixel((i,j),0)
     return out
 
-
+def erosion(imageName,b):
+    im1 = imageThreshold(imageName,200)
+    n = (2**8)-1 # arrumar isso aqui
+    B = []
+    a = set()
+    c = set()
+    (l,h) = im1.size
+    for i in range (0,l):
+        for j in range (0,h):
+            if(im1.getpixel((i,j))>=200):
+                a.add((i,j))
+    u = len(a)
+    v = len(b)
+    for i in a:
+        for j in b:
+            c.add((i[0]-j[0],i[1]-j[1]))
