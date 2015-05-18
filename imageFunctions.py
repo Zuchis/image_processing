@@ -10,5 +10,18 @@ def imageThreshold(imageName,T):
                 out.putpixel((j, i), im1.getpixel((j,i)))
             else:
                 out.putpixel((j,i), 0)
-    return im1
+    return out
+
+def dilation(imageName,b):
+    im1 = imageThreshold(imageName,200)
+    a = set()
+    (l,h) = im1.size
+    for i in range (0,l):
+        for j in range (0,h):
+            if(im1.getpixel((i,j))>=200):
+                a.add((i,j))
+    u = len(a)
+    v = len(b)
+    for i in range (0,u):
+        for j in range(0,v):
 
